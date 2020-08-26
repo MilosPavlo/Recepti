@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Cooking Recepti-O nama</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<script src="/javascripts/jquery.min.js"></script>
+
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+	<!-- Custom Theme files -->
+
+	<!-- Custom Theme files -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<script
+		type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!--webfont-->
+
+	<script src="/javascripts/responsiveslides.min.js"></script>
+	<script>
+		$(function () {
+			$("#slider").responsiveSlides({
+				auto: true,
+				speed: 500,
+				namespace: "callbacks",
+				pager: true,
+			});
+		});
+	</script>
+	<script type="text/javascript" src="/javascripts/move-top.js"></script>
+	<script type="text/javascript" src="/javascripts/easing.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1200);
+			});
+		});
+	</script>
+	<!--Animation-->
+	<script src="/javascripts/wow.min.js"></script>
+	<link href="/stylesheets/animate.css" rel='stylesheet' type='text/css' />
+	<script>
+		new WOW().init();
+	</script>
+
+
+<link rel="icon" href="favicon.ico?v=1.1">
+	<link
+		href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+		rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+		type='text/css'>
+	<link href="/stylesheets/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link href="/stylesheets/style.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+
+<body>
+
+	<div class="header  d-none d-lg-block">
+		<div class="container">
+			<div class="logo  wow bounceInDown animated" data-wow-delay="0.4s">
+				<a href="/index"><img src="/images/logo.png" alt="" /></a>
+			</div>
+			
+			<div class="header-right wow fadeInLeft animated" data-wow-delay="0.5s">
+				<%if(user!=""){%>
+					<div class="pb-2 ml-4 pl-1 ">
+						<img class="mb-1 mr-1"src="images/user.png" alt=""> <span class=""  style="color:#c69c30;"><%=user%></span>
+					</div>
+					<%}%>
+				<div class="search login">
+					<a href="<%=log.logI%>" class="btn text-warning px-5"><%=log.logO%></a>
+					
+				</div>
+			
+				
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<!-- heaeder section -->
+
+
+	<!-- heaeder section -->
+	<div class="container">
+
+		<!-- navbar starts -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark     d-auto d-lg-none" >
+			<span class=""  style="color:#c69c30;"><%=user%></span>
+			<a class=" navbar-brand" href="#"><img src="/images/logo.png" alt="" srcset=""></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<div class="nav-item">
+					<li><a class="nav-link" href="/index">POČETNA</a></li>
+				</div>
+					<li><a class="nav-link active"  href="/about">O NAMA</a></li>
+					<li><a class="nav-link"  href="/menu">SVI RECEPTI</a></li>
+					<li><a class="nav-link"  href="/dodaj">DODAJ</a></li>
+					<li><a class="nav-link"  href="/user-upload">MOJI RECEPTI</a></li>
+					<li><a href="<%=log.logI%>" class="nav-link capitalize"><%=log.logO%></a></li>
+				</ul>
+				
+			</div>
+		</nav>
+		<!-- navbar ends -->
+
+		<div class="main-content">
+			<div class="about-banner wow fadeInUp animated d-none d-lg-block " data-wow-delay="0.4s">
+				<div class="row ">
+				<div class="caption1 mr-5">
+					<div class="top-menu  wo mr-5 mt-0 w rollIn animated" data-wow-delay="0.4s">
+						<span class="menu  "> </span>
+						<ul class="ml-0">
+							<li><a  href="/index">POČETNA</a></li>
+							<li><a class="active" href="/about">O NAMA</a></li>
+							<li><a   href="/menu">SVI RECEPTI</a></li>
+							<li><a  href="/dodaj">DODAJ</a></li>
+							<li><a href="/user-upload">MOJI RECEPTI</a></li>
+							<div class="clearfix mr-5"></div>
+						</ul>
+					</div>
+				</div>
+			</div>
+				<!-- script-for-menu -->
+				<script>
+					$("span.menu").click(function () {
+						$(".top-menu ul").slideToggle("slow", function () {
+						});
+					});
+				</script>
+				<!-- script-for-menu -->
+			</div>
+			<div class="service text-center">
+				<h4 class="wow fadeInLeft animated" data-wow-delay="0.4s">DOBRODOŠLI</h4>
+				<h3 class="wow fadeInLeft animated" data-wow-delay="0.4s"> <span>Mi smo Cooking Recepti</span> </h3>
+				<p class="wow fadeInUpBig animated animated" data-wow-delay="0.4s">
+					Najkvalitetniji i najposećeniji sajt za recepte slatkih navika kao što su torte, kolači, delikati svih država, bombona i svega ostalog. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ipsum, magni neque voluptatum ut quia fuga? Excepturi dicta ipsum magnam! Assumenda expedita perspiciatis necessitatibus ea asperiores soluta magni explicabo quidem.</p>
+			</div>
+			<!---->
+			<div class="about">
+				<div class="about-top">
+					<div class="row justify-content-center">
+						<h3 class="wow fadeInLeft animated" data-wow-delay="0.4s">Par reči o nama</h3>
+					</div>
+					<div class="row">
+						<div class="col-12 col-lg-4 px-5 px-lg-2 about-in wow bounceIn animated" data-wow-delay="0.4s">
+							<div class="mx-2">
+							<a href="/single"><img class="img-responsive" src="/images/food/10.jpg" alt=" "></a>
+						</div>
+						</div>
+
+						<div class="col-12 col-lg-8  px-5  pl-lg-5 top-about wow fadeInRight animated" data-wow-delay="0.4s">
+
+							<h5><a href="/single">Sorda atcursus nec luctus a lore tristique orci acem. Duis ultrici
+									es
+									pharetra magna. Donec accum san malesuada orcinec sit amet eros.</a></h5>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+								has
+								been the industry's standard dummy text ever since the 1500s, when an unknown printer
+								took a
+								galley of type and scrambled it to make a type specimen book. It has survived not only
+								five
+								centuries, but also the leap into electronic typesetting, remaining essentially
+								unchanged.
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+								has
+								been the industry's Lorem Ipsum is simply dummy text of the printing and typesetting
+								industrystandard dummy text ever since the 1500s, when an unknown printer took a galley
+								of
+								type and scrambled it to make a type specimen book. </p>
+
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="about-bottom">
+				<div class="row justify-content-center mt-2 mb-5">
+				<h4 class="wow rotateInUpLeft animated" data-wow-delay="0.4s">KO SMO MI</h4>
+			</div>
+				<div class="row">
+					
+						<div class=" col-12 col-md-4  wow fadeInRight animated" data-wow-delay="0.4s">
+							<span class="in-sed">1</span>
+							<div class="left-sit">
+								<h6>Najbolja Stranica za kolače</h6>
+								<p>Mes cuml dia sed net lacus utenias cet inge iiqt es site am eismod icto.</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+
+
+						<div class="col-12 col-md-4  wow bounce animated" data-wow-delay="0.4s">
+							<span class="in-sed">2</span>
+							<div class="left-sit">
+								<h6>Najbolja stranica za recepte</h6>
+								<p>Mes cuml dia sed net lacus utenias cet inge iiqt es site am eismod icto.</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+
+
+						<div class="col-12 col-md-4  wow fadeInRight animated" data-wow-delay="0.4s">
+							<span class="in-sed">3</span>
+							<div class="left-sit">
+								<h6>Stranica sa najvećim cooking community-jem</h6>
+								<p>Mes cuml dia sed net lacus utenias cet inge iiqt es site am eismod icto.</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="clearfix"> </div>
+					
+
+
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		
+	<script type="text/javascript">
+		$(document).ready(function () {
+			/*
+			var defaults = {
+					containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+		});
+	</script>
+	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+</body>
+
+</html>

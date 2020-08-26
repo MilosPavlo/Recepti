@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Cooking Recepti</title>
+	<link rel="icon" href="favicon.ico?v=1.1">
+	<script src="/javascripts/bootstrap.js"></script>
+
+	
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+	integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+			integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+			crossorigin="anonymous"></script>
+
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+	<!-- Custom Theme files -->
+
+	<!-- Custom Theme files -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<script
+		type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!--webfont-->
+
+	<script src="/javascripts/responsiveslides.min.js"></script>
+	<script>
+		$(function () {
+			$("#slider").responsiveSlides({
+				auto: true,
+				speed: 500,
+				namespace: "callbacks",
+				pager: true,
+			});
+		});
+	</script>
+	<script type="text/javascript" src="/javascripts/move-top.js"></script>
+	<script type="text/javascript" src="/javascripts/easing.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1200);
+			});
+		});
+	</script>
+	<!--Animation-->
+	<script src="/javascripts/wow.min.js"></script>
+	<link href="/stylesheets/animate.css" rel='stylesheet' type='text/css' />
+	<script>
+		new WOW().init();
+	</script>
+
+
+	
+	<link
+		href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+		rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+		type='text/css'>
+	<link href="/stylesheets/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link href="/stylesheets/style.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+
+<body>
+	<!-- header-section-starts -->
+	<div class="header d-none d-lg-block">
+		<div class="container">
+
+
+
+			<div class="logo  wow bounceInDown animated" data-wow-delay="0.4s">
+				<a href="/index"><img src="images/logo.png" alt="" /></a>
+				
+			</div>
+
+			<div class="header-right wow fadeInLeft animated" data-wow-delay="0.5s">
+				<%if(user!=""){%>
+					<div class="pb-2 ml-4 pl-1 ">
+						<img class="mb-1 mr-1"src="images/user.png" alt=""> <span class=""  style="color:#c69c30;"><%=user%></span>
+					</div>
+					<%}%>
+				<div class="search login">
+					<a href="<%=log.logI%>" class="btn text-warning px-5"><%=log.logO%></a>
+					
+				</div>
+			
+				
+			</div>
+			<div class="clearfix"></div>
+		</div>
+
+	</div>
+
+
+
+
+	<!-- heaeder section -->
+	<div class="container">
+
+			<!-- navbar starts -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark     d-auto d-lg-none ">
+			<span class=""  style="color:#c69c30;"><%=user%></span>
+			<a class=" navbar-brand" href="#"><img src="images/logo.png" alt="" srcset=""></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				
+				<ul class="navbar-nav mr-auto">
+					<div class="nav-item">
+					<li><a class="nav-link active" href="index">POČETNA</a></li>
+				</div>
+					<li><a class="nav-link"  href="about">O NAMA</a></li>
+					<li><a class="nav-link"  href="menu">SVI RECEPTI</a></li>
+					<li><a class="nav-link"  href="dodaj">DODAJ</a></li>
+					<li><a class="nav-link"  href="user-upload">MOJI RECEPTI</a></li>
+					<li><a href="<%=log.logI%>" class="nav-link capitalize"><%=log.logO%></a></li>
+				</ul>
+				
+			</div>
+		</nav>
+		<!-- navbar ends -->
+
+
+		<div class="main-content">
+			<div class="banner wow fadeInUp animated" data-wow-delay="0.4s">
+				<!---->
+				<div class="slider d-none d-lg-block ">
+					<div class="callbacks_container">
+						<ul class="rslides" id="slider">
+							<li>
+								<img src="/food/slider1.jpg" alt="" />
+								<div class="caption1 ">
+									<div class="top-menu  wo mr-5 mt-0 w rollIn animated" data-wow-delay="0.4s">
+										<span class="menu lft "> </span>
+										<ul>
+											<li><a class="active" href="/index">POČETNA</a></li>
+											<li><a href="/about">O NAMA</a></li>
+											<li><a href="/menu">SVI RECEPTI</a></li>
+											<li><a href="/dodaj">DODAJ</a></li>
+											<li><a href="/user-upload">MOJI RECEPTI</a></li>
+											<div class="clearfix"></div>
+										</ul>
+									</div>
+								</div>
+							</li>
+						
+							
+						</ul>
+					</div>
+				</div>
+				<!----->
+			</div>
+			<div class="service text-center ">
+				<h4 class="wow fadeInLeft animated" data-wow-delay="0.4s">Najbolji Recepti U Državi</h4>
+				<h3 class="wow fadeInLeft animated" data-wow-delay="0.4s">VAŠE <span>SLATKE</span> NAVIKE</h3>
+				<div class="row">
+				<p class="wow fadeInUpBig animated animated my-0 py-0" data-wow-delay="0.4s">Lorem ipsum dolor sit amet conse
+					ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+					ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+					an</p>
+				</div>
+			</div>
+			<!---->
+			<div id="about" class="row about">
+				<div class="about-top">
+					<div class="row">
+						<div class="col-md-6 pl-5 about-device indexpicture wow bounceInLeft animated">
+							<img src="/food/10.jpg" alt="" />
+						</div>
+						<div class="col-md-6 about-device-info wow bounceInRight animated">
+							<div class="device-text ml-5">
+								<h3>Ovde ide naziv recepta</h3>
+								<p>ovde ide opis recepta </p>
+							</div>
+							<div class="about-list ml-5">
+								<ul>
+									<li><a href="/index/404"><span class="abt1"></span>Vrhunski Kvalitet</a></li>
+									<li><a href="/index/404"><span class="abt2"></span>Šokirajući Ukus</a></li>
+									<li><a href="/index/404"><span class="abt3"></span>Recept Sa Najviše Ocena</a></li>
+									<li><a href="/index/404"><span class="abt4"></span>Brzo Se Sprema</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="special-offers-section">
+			<div class="special-offers-section-head text-center wow fadeInRight animated" data-wow-delay="0.4s">
+				<h4>Ostali Recepti</h4>
+			</div>
+			<div class="special-offers-section-grids">
+				<div class="m_3"><span class="middle-dotted-line"> </span> </div>
+				<div class="row pr-3 mb-5 " >
+                    <%if(allR.length<3){for(var i=0; i <allR.length; i++){%>
+					<div class="col-12 col-md-4" >
+						<div class="bg-white mx-2 fadeInUp animated " data-wow-delay="0.6s">
+							<div class="bg-white mx-2 my-2 p-2 ">
+								<div class="row mx-3 my-2" >
+									<a href="/single/<%=allR[i].id%>>">
+										<h4 class="text-warning"><%=allR[i].imeRecepta%></h4>
+									</a>
+								</div>
+								<div class="ml-3" >
+									<span><b>Opis Recepta: </b></span><br>
+									<span><%=allR[i].opis%></span>
+								</div>
+								<div class="row m-3">
+									<a class="btn btn-warning" href="/single/<%=allR[i].id%>">Pogledaj</a>
+								</div>
+
+								<div class="row m-3">
+									<span>Ocena:&nbsp;</span>
+									<span id="ocena"><%=allR[i].ocena%></span>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+                    <%}}else{for(var i=0; i <3; i++){%>
+                    <div class="col-12 col-md-4">
+                        <div class="bg-white mx-2 fadeInUp animated" data-wow-delay="0.6s">
+                            <div class="bg-white mx-2 my-2 p-2">
+                                <div class="row mx-3 my-2">
+                                    <a href="/single/<%=allR[i].id%>>">
+                                        <h4 class="text-warning"><%=allR[i].imeRecepta%></h4>
+                                    </a>
+                                </div>
+                                <div class="ml-3">
+                                    <span><b>Opis Recepta</b><%=allR[i].opis%></span>
+                                </div>
+                                <div class="row m-3">
+                                    <a class="btn btn-warning" href="/single/<%=allR[i].id%>">Pogledaj</a>
+                                </div>
+
+                                <div class="row m-3">
+                                    <span>Ocena:&nbsp;</span>
+                                    <span id="ocena"><%=allR[i].ocena%></span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <%}}%>
+
+
+				</div>
+				<div class="row justify-content-center mt-5">
+					<a href="/menu" class="btn btn-warning">Svi Recepti</a>
+				</div>
+				<script type="text/javascript">
+					$(window).load(function () {
+
+						$("#flexiselDemo3").flexisel({
+							visibleItems: 3,
+							animationSpeed: 1000,
+							autoPlay: false,
+							autoPlaySpeed: 3000,
+							pauseOnHover: true,
+							enableResponsiveBreakpoints: true,
+							responsiveBreakpoints: {
+								portrait: {
+									changePoint: 480,
+									visibleItems: 1
+								},
+								landscape: {
+									changePoint: 640,
+									visibleItems: 2
+								},
+								tablet: {
+									changePoint: 768,
+									visibleItems: 2
+								}
+							}
+						});
+
+					});
+				</script>
+				<script type="text/javascript" src="/javascripts/jquery.flexisel.js"></script>
+			</div>
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			/*
+			var defaults = {
+					containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+		});
+	</script>
+	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+</body>
+
+</html>

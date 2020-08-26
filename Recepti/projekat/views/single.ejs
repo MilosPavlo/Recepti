@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Cooking Recepti- Upload</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<script src="/javascripts/jquery.min.js"></script>
+
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+	<!-- Custom Theme files -->
+
+	<!-- Custom Theme files -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<script
+		type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!--webfont-->
+
+	<script src="/javascripts/responsiveslides.min.js"></script>
+	<script>
+		$(function () {
+			$("#slider").responsiveSlides({
+				auto: true,
+				speed: 500,
+				namespace: "callbacks",
+				pager: true,
+			});
+		});
+	</script>
+	<script type="text/javascript" src="/javascripts/move-top.js"></script>
+	<script type="text/javascript" src="/javascripts/easing.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1200);
+			});
+		});
+	</script>
+	<!--Animation-->
+	<script src="/javascripts/wow.min.js"></script>
+	<link href="/stylesheets/animate.css" rel='stylesheet' type='text/css' />
+	<script>
+		new WOW().init();
+	</script>
+
+<link rel="stylesheet" href="/stylesheets/stars.css">
+
+<link rel="icon" href="favicon.ico?v=1.1">
+	<link
+		href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+		rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+		type='text/css'>
+	<link href="/stylesheets/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link href="/stylesheets/style.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+
+<body>
+
+	<div class="header  d-none d-lg-block">
+		<div class="container">
+			<div class="logo  wow bounceInDown animated" data-wow-delay="0.4s">
+				<a href="/index"><img src="/images/logo.png" alt="" /></a>
+			</div>
+		
+			<div class="header-right wow fadeInLeft animated" data-wow-delay="0.5s">
+				<%if(user!=""){%>
+					<div class="pb-2 ml-4 pl-1 ">
+						<img class="mb-1 mr-1"src="images/user.png" alt=""> <span class=""  style="color:#c69c30;"><%=user%></span>
+					</div>
+					<%}%>
+				<div class="search login">
+					<a href="<%=log.logI%>" class="btn text-warning px-5"><%=log.logO%></a>
+					
+				</div>
+			
+				
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<!-- heaeder section -->
+
+
+	<!-- heaeder section -->
+	<div class="container">
+
+		<!-- navbar starts -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark     d-auto d-lg-none">
+			<span class=""  style="color:#c69c30;"><%=user%></span>
+			<a class=" navbar-brand" href="#"><img src="/images/logo.png" alt="" srcset=""></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<div class="nav-item">
+					<li><a class="nav-link" href="/index">POČETNA</a></li>
+				</div>
+					<li><a class="nav-link"  href="/about">O NAMA</a></li>
+					<li><a class="nav-link active"  href="/menu">SVI RECEPTI</a></li>
+					<li><a class="nav-link"  href="/dodaj">DODAJ</a></li>
+					<li><a class="nav-link"  href="/user-upload">MOJI RECEPTI</a></li>
+					<li><a href="<%=log.logI%>" class="nav-link capitalize"><%=log.logO%></a></li>
+				</ul>
+				
+			</div>
+		</nav>
+		<!-- navbar ends -->
+		<div class="main-content">
+			<div class="about-banner wow fadeInUp animated  d-none d-lg-block " data-wow-delay="0.4s">
+				<div class="row ">
+				<div class="caption1 mr-5">
+					<div class="top-menu  wo mr-5 mt-0 w rollIn animated" data-wow-delay="0.4s">
+						<span class="menu  "> </span>
+						<ul class="ml-0">
+							<li><a  href="/index">POČETNA</a></li>
+							<li><a  href="/about">O NAMA</a></li>
+							<li><a class="active"  href="/menu">SVI RECEPTI</a></li>
+							<li><a href="/dodaj">DODAJ</a></li>
+							<li><a href="/user-upload">MOJI RECEPTI</a></li>
+							<div class="clearfix mr-5"></div>
+						</ul>
+					</div>
+				</div>
+			</div>
+				<!-- script-for-menu -->
+				<script>
+					$("span.menu").click(function () {
+						$(".top-menu ul").slideToggle("slow", function () {
+						});
+					});
+				</script>
+				<!-- script-for-menu -->
+			</div>
+			<div class="single">
+				<div class="blog-top-in">
+					<div class="row">
+						<div class=" col-lg-4 mr-5 mr-md-5 top-blog wow bounceIn animated animated" data-wow-delay="0.4s">
+							<a href="#"><img class="img-responsive" src="/Recepti_Images/<%= allR[0].slika%>" alt=" "></a>
+						</div>
+						<div class=" col-md-12 col-lg-7 pl-sm-0 ml-sm-2  pl-md-0 ml-md-2  pl-lg-4  sed-in wow fadeInRight animated" data-wow-delay="0.4s">
+							<h4><%= allR[0].imeRecepta%></h4>
+							<p><b><%= allR[0].opis%></b> </p>
+
+							<div class="row mt-2 ml-2">
+								
+							</div>
+						</div>
+
+						<div class="clearfix"> </div>
+						<% if(checkLog==1){%>
+						<button type="button" class="btn btn-warning mt-3" data-toggle="modal" data-target="#exampleModal">
+							Oceni
+						  </button>
+							<%}%>
+						<div class="modal mx-3" id="exampleModal" tabindex="-1" role="dialog">
+							<div class="modal-dialog px-3" role="document">
+							  <div class="modal-content px-3">
+								<div class="modal-header px-3">
+								  <h5 class="modal-title px-3"></h5>
+								  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								  </button>
+								</div>
+								
+								<form action="/single/oceni/<%= allR[0].id%>" method="post">
+								
+									
+									<div class="row justify-content-center mb-5">
+
+
+										<div class="slidecontainer">
+											<input type="range" min="1" max="5" value=<%=ocena[0].rate%> step="1" class="slider" id="myRange" name="ocena">
+
+											<p>Ocena: <span id="demo"></span></p>
+										</div>
+
+
+
+									</div>
+									
+								
+
+									<div class="row justify-content-center ">
+								  <button type="button" class="btn btn-secondary col-3 mx-2 mb-3" data-dismiss="modal">Zatvori</button>
+								  <button type="submit" class="btn btn-warning col-3 mx-2 mb-3">Oceni</button>
+								</div>
+								</form>
+								
+							  </div>
+							</div>
+						  </div>
+					</div>
+				</div>
+				
+				<p class="at-in wow fadeInUpBig animated animated animated mt-5" data-wow-delay="0.4s">
+					<%= allR[0].sastojci%> </p>
+				<div class="wow fadeInDownBig animated animated animated">
+					<ul class="links">
+						<li> Ocena: <span style="color:#c69c30;"><%=allR[0].ocena%></span></li>
+						<li><a href="#"><i class="admin"> </i><span class="icon_text"><%= allR[0].username%></span></a></li>
+						<li class="last"><a href="#"><i class="permalink"> </i><span
+									class="icon_text">Permalink</span></a></li>
+					</ul>
+					
+				</div>
+				<!---->
+
+
+				<!-- footer-section-ends -->
+				<script type="text/javascript">
+					$(document).ready(function () {
+					
+
+						$().UItoTop({ easingType: 'easeOutQuart' });
+
+					});
+				</script>
+				<script>
+					var slider = document.getElementById("myRange");
+					var output = document.getElementById("demo");
+					output.innerHTML = slider.value;
+
+					slider.oninput = function() {
+								output.innerHTML = this.value;
+							}
+							</script>
+				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+</body>
+
+</html>
